@@ -1,9 +1,9 @@
-## SciMind: A Multimodal Mixture-of-Experts Model for Advancing Pharmaceutical Sciences
+# SciMind: A Multimodal Mixture-of-Experts Model for Advancing Pharmaceutical Sciences
 
 The repo contains:
 - The official implementation of [SciMind: A Multimodal Mixture-of-Experts Model for Advancing Pharmaceutical Sciences](https://openreview.net/forum?id=xbyPquFUB4)
 
-#### Content
+## Content
 - Introduction
 - Model and Data
 - Environment
@@ -12,7 +12,7 @@ The repo contains:
 - Fine-tuning instructions
 - Citation
 
-#### Introduction
+## Introduction
 SciMind is a multimodal mixture of experts large model developed based on the Llama2 model within the MindSpore framework
 
 Improvements compared to Llama2:
@@ -23,13 +23,13 @@ Improvements compared to Llama2:
 
 ![Picture](https://github.com/fangxintao/SciMind/blob/main/picture/scimind.png?raw=true "SciMind")
 
-####  Model and Data
-##### model
+##  Model and Data
+### model
 - Pre-trained model without fine-tuning is available at : [*Scimind.ckpt*]()
 - LPM-24 text2smiles finetuned model is available at : [*Scimind-text2smiles.ckpt*]()
 - LPM-24 smiles2text finetuned model is available at : [*Scimind-smiles2text.ckpt*]()
 
-##### data
+### data
 - LPM-24 dataset refer to *Repository Introduction*
 - other data:
 	
@@ -39,14 +39,14 @@ Improvements compared to Llama2:
 | MoA |
 | Protein-oriented_Instructions |
 
-#### Environment
+## Environment
 
 1. Hardware: Ascend 910A/B
 2. MindSpore：2.2
 3. MindFormers version: 0.8.0
 4. Refer to requirement.txt for other dependencies
 
-#### Repository Introduction
+## Repository Introduction
 
 1. Files related to the model are located in: *./mindformers/model/llama*\
    **llama**\
@@ -87,7 +87,7 @@ Improvements compared to Llama2:
    + ├── LPM-24_text2smile_generate.txt # Already processed and ready for direct inference\
    + ├── eval-molgen.txt # LPM-24 original validation set
 
-#### Quick start
+## Quick start
 
 For quick use our model, first you need to configure the model path and parameters for accelerating inference in the parameter configuration file
 
@@ -97,7 +97,7 @@ For quick use our model, first you need to configure the model path and paramete
 
 then, you need to prepare the correct format data and run scripts
 
-##### 1. data preprocessing
+### 1. data preprocessing
 
 > - For smiles2text task generation, construct data like:
 >    **./LPM-24-data/smiles2text_generate/LPM-24_smile2text_generate.txt**
@@ -105,7 +105,7 @@ then, you need to prepare the correct format data and run scripts
 > - For text2smiles task generation, construct data like:
 >   **./LPM-24-data/text2smiles_generate/LPM-24_text2smiles_generate.txt**
 
-##### 2. Generation
+### 2. Generation
 
 -  run script *run_mindformer.py* (run by one NPU)
 
@@ -130,9 +130,9 @@ example：
  ```
 
 
-#### Fine-tuning instructions
+## Fine-tuning instructions
 
-##### 1. Data preprecessing (Taking the smile2text task of the LPM-24 dataset as an example)
+### 1. Data preprecessing (Taking the smile2text task of the LPM-24 dataset as an example)
 
 - Process the original LPM-24 data into a conversational text format and save it as a JSON file. JSON reference format:
 
@@ -148,7 +148,7 @@ example：
   --output_file {output_path}example.mindrecord
 ```
 
-##### 2. Fine-tuning (Fine-tuning defaults to requiring 8 NPUs)
+### 2. Fine-tuning (Fine-tuning defaults to requiring 8 NPUs)
 
 Specify the model location and the MindRecord format data location in the configuration file
 
@@ -161,7 +161,7 @@ Turn to the path：*./mindformers/scripts* , then run shell script:
 ```
 bash run_distribute.sh /user/config/jobstart_hccl.json ../configs/llama2/run_llama2_7b_finetune.yaml [0,8] train
 ```
-#### Citation
+## Citation
 
 If you use Scimind in your work, please  cite our paper:
 ```
