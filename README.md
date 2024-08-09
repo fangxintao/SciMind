@@ -11,7 +11,7 @@ mindspore框架下，基于llama2模型开发的多模态混合专家大模型
 
 参考图片如下:
 
-![这是图片](https://gitee.com/gitee_fangxintao/sci-mind/raw/master/picture/scimind.png "SciMind")
+![这是图片](https://github.com/fangxintao/SciMind/tree/main/picture/scimind.png "SciMind")
 
 #### 环境要求
 
@@ -118,13 +118,15 @@ bash run_distribute.sh /user/config/jobstart_hccl.json ../configs/llama2/run_lla
 - 方式一：run_mindformer.py脚本启动
 
 > 1. 单卡推理
-
+```
 > python run_mindformer.py\
-> --config {config_file_path}\
-> --run_mode predict\
-> --predict_data {input_data_path}\
-> --use_parallel False --device_id 0\
-> --save_file {output_path}
+--config {config_file_path}\
+--run_mode predict\
+--predict_data {input_data_path}\
+--use_parallel False --device_id 0\
+--save_file {output_path}
+```
+
 
 > 示例：
 > 
@@ -132,7 +134,17 @@ bash run_distribute.sh /user/config/jobstart_hccl.json ../configs/llama2/run_lla
 > python run_mindformer.py --config configs/llama2/run_llama2_7b_finetune.yaml --run_mode predict --predict_data ./LPM-24-data/smiles2text_generate/LPM-24_smile2text_generate.txt --use_parallel False --device_id 0 --save_file ./LPM-24-data/smiles2text_generate/output_LPM_smiles2text.txt
 > ```
 
+#### 其他数据集
 
+除了LPM-24数据集，我们使用了许多其他数据集用于验证模型效果
+
+| Dataset  | Train data | Test data |
+| ------------- | ------------- | -------------|
+| ChEBI  | 0  | 0 |
+| MoA | 0  | 0 |
+| DeePromoter | 0  | 0 |
+| human_mousr_promoter | 0  | 0 |
+| Protein-oriented_Instructions | 0  | 0 |
 
 #### 参与贡献
 
