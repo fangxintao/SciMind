@@ -2,8 +2,7 @@
 
 
 <h6 align="center">
-    [<img src="https://img.shields.io/badge/英文-English-blue"  width="85">](README.md) [<img src="https://img.shields.io/badge/中文-Simplified chinese-blue&format=png"  width="140">](README_CN.md)
-	
+    <img src="https://img.shields.io/badge/英文-English-blue"  width="85", href="README.md"> <img src="https://img.shields.io/badge/中文-Simplified chinese-blue"  width="140", href="README_CN.md">
 </h6>
 
 The repo contains:
