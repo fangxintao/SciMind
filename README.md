@@ -11,7 +11,7 @@ mindspore框架下，基于llama2模型开发的多模态混合专家大模型
 
 参考图片如下:
 
-![这是图片](https://github.com/fangxintao/SciMind/tree/main/picture/scimind.png "SciMind")
+![这是图片](https://github.com/fangxintao/SciMind/blob/main/picture/scimind.png?raw=true "SciMind")
 
 #### 环境要求
 
