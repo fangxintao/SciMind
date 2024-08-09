@@ -97,7 +97,7 @@ For quick use our model, first you need to configure the model path and paramete
 
 then, you need to prepare the correct format data and run scripts
 
-#####1. data preprocessing
+##### 1. data preprocessing
 
 > - For smiles2text task generation, construct data like:
 >    **./LPM-24-data/smiles2text_generate/LPM-24_smile2text_generate.txt**
@@ -105,7 +105,7 @@ then, you need to prepare the correct format data and run scripts
 > - For text2smiles task generation, construct data like:
 >   **./LPM-24-data/text2smiles_generate/LPM-24_text2smiles_generate.txt**
 
-#####2. Generation
+##### 2. Generation
 
 -  run script *run_mindformer.py* (run by one NPU)
 

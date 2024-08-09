@@ -104,7 +104,7 @@ mindspore框架下，基于llama2模型开发的多模态混合专家大模型
 
 然后，你需要准备正确格式的数据并运行脚本
 
-#####1. 数据预处理
+##### 1. 数据预处理
 
 > - For smiles2text task generation, construct data like:
 >    **./LPM-24-data/smiles2text_generate/LPM-24_smile2text_generate.txt**
@@ -112,7 +112,7 @@ mindspore框架下，基于llama2模型开发的多模态混合专家大模型
 > - For text2smiles task generation, construct data like:
 >   **./LPM-24-data/text2smiles_generate/LPM-24_text2smiles_generate.txt**
 
-#####2. 模型推理
+##### 2. 模型推理
 
 -  运行 *run_mindformer.py* 脚本 (运行在单卡上)
 
