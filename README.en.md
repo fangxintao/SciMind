@@ -20,7 +20,7 @@ Improvements compared to Llama2:
 
 #### Repository Introduction
 
-1. Files related to the model are located in: *./mindformers/model/llama*
+1. Files related to the model are located in: *./mindformers/model/llama*\
    **llama**\
    ├── __init__.py\
    ├── convert_weight.py         # Weight conversion script\
@@ -30,10 +30,10 @@ Improvements compared to Llama2:
    ├── llama_processor.py        # llama preprocess\
    ├── llama_tokenizer.py        # The tokenizer has an expanded vocabulary\
    └── llama_transformer.py      # transformer layer
-2. The model parameter configuration file is located in: *./configs/llama*
+2. The model parameter configuration file is located in: *./configs/llama*\
    **llama**\
    ├── run_llama_7b_finetune.yaml         # 7b model full fine-tuning startup configuration
-3. LPM24 data: *./LPM-24-data*
+3. LPM24 data: *./LPM-24-data*\
    **LPM-24-data**\
    ├── smiles_to_text
    
@@ -103,13 +103,3 @@ During fine-tuning, need to configure the model path and parameters for accelera
 2.  Create Feat_xxx branch
 3.  Commit your code
 4.  Create Pull Request
-
-
-#### Gitee Feature
-
-1.  You can use Readme\_XXX.md to support different languages, such as Readme\_en.md, Readme\_zh.md
-2.  Gitee blog [blog.gitee.com](https://blog.gitee.com)
-3.  Explore open source project [https://gitee.com/explore](https://gitee.com/explore)
-4.  The most valuable open source project [GVP](https://gitee.com/gvp)
-5.  The manual of Gitee [https://gitee.com/help](https://gitee.com/help)
-6.  The most popular members  [https://gitee.com/gitee-stars/](https://gitee.com/gitee-stars/)

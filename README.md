@@ -22,7 +22,7 @@ mindspore框架下，基于llama2模型开发的多模态混合专家大模型
 
 #### 仓库介绍
 
-1. 模型具体实现为：*./mindformers/model/llama*
+1. 模型具体实现为：*./mindformers/model/llama*\
    **llama**\
    ├── __init__.py\
    ├── convert_weight.py         # 权重转换脚本\
@@ -32,10 +32,10 @@ mindspore框架下，基于llama2模型开发的多模态混合专家大模型
    ├── llama_processor.py        # llama预处理\
    ├── llama_tokenizer.py        # tokenizer，扩充了词表\
    └── llama_transformer.py      # transformer层实现
-2. 模型参数配置文件：*./configs/llama*
+2. 模型参数配置文件：*./configs/llama*\
    **llama**\
    ├── run_llama_7b_finetune.yaml         # 7b模型全量微调启动配置
-3. LPM24数据：*./LPM-24-data*
+3. LPM24数据：*./LPM-24-data*\
    **LPM-24-data**\
    ├── smiles_to_text
    
@@ -152,12 +152,3 @@ bash run_distribute.sh /user/config/jobstart_hccl.json ../configs/llama2/run_lla
 2. 新建 Feat_xxx 分支
 3. 提交代码
 4. 新建 Pull Request
-
-#### 特技
-
-1. 使用 Readme\_XXX.md 来支持不同的语言，例如 Readme\_en.md, Readme\_zh.md
-2. Gitee 官方博客 [blog.gitee.com](https://blog.gitee.com)
-3. 你可以 [https://gitee.com/explore](https://gitee.com/explore) 这个地址来了解 Gitee 上的优秀开源项目
-4. [GVP](https://gitee.com/gvp) 全称是 Gitee 最有价值开源项目，是综合评定出的优秀开源项目
-5. Gitee 官方提供的使用手册 [https://gitee.com/help](https://gitee.com/help)
-6. Gitee 封面人物是一档用来展示 Gitee 会员风采的栏目 [https://gitee.com/gitee-stars/](https://gitee.com/gitee-stars/)
