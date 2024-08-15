@@ -1,7 +1,7 @@
-<div align="center">
-# SciMind: A Multimodal Mixture-of-Experts Model for Advancing Pharmaceutical Sciences 
+<h2 align="center">SciMind: A Multimodal Mixture-of-Experts Model for Advancing Pharmaceutical Sciences </h2>
 
-[![简体中文 badge](https://img.shields.io/badge/%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87-Simplified%20Chinese-blue)](./README_CN.md)[![英文 badge](https://img.shields.io/badge/%E8%8B%B1%E6%96%87-English-blue)](./README.md)
+<div align="center">
+[![简体中文 badge](https://img.shields.io/badge/%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87-Simplified%20Chinese-blue)](./README_CN.md) [![英文 badge](https://img.shields.io/badge/%E8%8B%B1%E6%96%87-English-blue)](./README.md)
 
 </div>
 
@@ -54,43 +54,43 @@ Improvements compared to Llama2:
 
 ## Repository Introduction
 
-1. Files related to the model are located in: *./mindformers/model/llama*\
-   **llama**\
-   ├── __init__.py\
-   ├── convert_weight.py         # Weight conversion script\
-   ├── llama.py                  # Model\
-   ├── llama_config.py           # Model configuration \
-   ├── llama_layer.py            # Llama network layer definition, with the addition of a mixture of experts system\
-   ├── llama_processor.py        # llama preprocess\
-   ├── llama_tokenizer.py        # The tokenizer has an expanded vocabulary\
+1. Files related to the model are located in: *./mindformers/model/llama*
+   **llama**
+   ├── __init__.py
+   ├── convert_weight.py         # Weight conversion script
+   ├── llama.py                  # Model
+   ├── llama_config.py           # Model configuration 
+   ├── llama_layer.py            # Llama network layer definition, with the addition of a mixture of experts system
+   ├── llama_processor.py        # llama preprocess
+   ├── llama_tokenizer.py        # The tokenizer has an expanded vocabulary
    └── llama_transformer.py      # transformer layer
-2. The model parameter configuration file is located in: *./configs/llama*\
-   **llama**\
+2. The model parameter configuration file is located in: *./configs/llama*
+   **llama**
    ├── run_llama_7b_finetune.yaml         # 7b model full fine-tuning startup configuration
-3. LPM24 data: *./LPM-24-data*\
-   **LPM-24-data**\
+3. LPM24 data: *./LPM-24-data*
+   **LPM-24-data**
    ├── smiles_to_text
-   + ├── LPM-24_train_qa_conversation.json\
-   + ├── LPM-24_test_qa_conversation.json\
-   + ├── LPM-24_test.json\
+   + ├── LPM-24_train_qa_conversation.json
+   + ├── LPM-24_test_qa_conversation.json
+   + ├── LPM-24_test.json
    + ├── LPM-24_train.json
    
    ├── smiles_to_text_generate
    
-   + ├── LPM-24_smiles2text_generate.txt # Already processed and ready for direct inference\
-   + ├── eval-text.txt  # LPM-24 original validation set\
+   + ├── LPM-24_smiles2text_generate.txt # Already processed and ready for direct inference
+   + ├── eval-text.txt  # LPM-24 original validation set
    + ├── eval-text-special_token.txt  # LPM-24 dataset processed with special tokens
    
    ├── text_to_smiles
    
-   + ├── LPM-24_train_qa_conversation.json\
-   + ├── LPM-24_test_qa_conversation.json\
-   + └── LPM-24_test.json\
+   + ├── LPM-24_train_qa_conversation.json
+   + ├── LPM-24_test_qa_conversation.json
+   + └── LPM-24_test.json
    + └── LPM-24_test.json
    
    ├── text_to_smiles_generate
    
-   + ├── LPM-24_text2smile_generate.txt # Already processed and ready for direct inference\
+   + ├── LPM-24_text2smile_generate.txt # Already processed and ready for direct inference
    + ├── eval-molgen.txt # LPM-24 original validation set
 
 ## Quick start
@@ -116,22 +116,22 @@ then, you need to prepare the correct format data and run scripts
 -  run script *run_mindformer.py* (run by one NPU)
 
 ```
-> python run_mindformer.py\
---config {config_file_path}\
---run_mode predict\
---predict_data {input_data_path}\
---use_parallel False --device_id 0\
+> python run_mindformer.py
+--config {config_file_path}
+--run_mode predict
+--predict_data {input_data_path}
+--use_parallel False --device_id 0
 --save_file {output_path}
 ```
 example：
 
  ```
- python run_mindformer.py\
- --config configs/llama2/run_llama2_7b_finetune.yaml\
- --run_mode predict\
- --predict_data ./LPM-24-data/smiles2text_generate/LPM-24_smile2text_generate.txt\
- --use_parallel False\
- --device_id 0\
+ python run_mindformer.py
+ --config configs/llama2/run_llama2_7b_finetune.yaml
+ --run_mode predict
+ --predict_data ./LPM-24-data/smiles2text_generate/LPM-24_smile2text_generate.txt
+ --use_parallel False
+ --device_id 0
  --save_file ./LPM-24-data/smiles2text_generate/output_LPM_smiles2text.txt
  ```
 
@@ -146,11 +146,11 @@ example：
 
 - Further process the JSON file to obtain a MindRecord format file for model fine-tuning. Use the following preprocessing script to generate MindRecord format training data
 ```
-  python llama_preprocess_2.py\
-  --dataset_type qa\
-  --input_glob {json/data/path} # Example: ./LPM-24-data/text2smiles/LPM-24_train_qa_conversation.json\
-  --model_file ./mindformers/checkpoint_download/llama2/tokenizer.model\
-  --seq_length 2048\
+  python llama_preprocess_2.py
+  --dataset_type qa
+  --input_glob {json/data/path} # Example: ./LPM-24-data/text2smiles/LPM-24_train_qa_conversation.json
+  --model_file ./mindformers/checkpoint_download/llama2/tokenizer.model
+  --seq_length 2048
   --output_file {output_path}example.mindrecord
 ```
 
