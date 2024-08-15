@@ -1,5 +1,6 @@
-<div align="center">
-<h2 align="center">SciMind: A Multimodal Mixture-of-Experts Model for Advancing Pharmaceutical Sciences </h2>
+<p align="center">
+## SciMind: A Multimodal Mixture-of-Experts Model for Advancing Pharmaceutical Sciences 
+
 [![简体中文 badge](https://img.shields.io/badge/%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87-Simplified%20Chinese-blue)](./README_CN.md) [![英文 badge](https://img.shields.io/badge/%E8%8B%B1%E6%96%87-English-blue)](./README.md)
 
 </div>
