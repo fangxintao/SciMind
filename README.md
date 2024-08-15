@@ -1,9 +1,10 @@
 <h2 align="center">SciMind: A Multimodal Mixture-of-Experts Model for Advancing Pharmaceutical Sciences </h2>
 
-<p align="center">
+<center>
 [![简体中文 badge](https://img.shields.io/badge/%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87-Simplified%20Chinese-blue)](./README_CN.md)
 [![英文 badge](https://img.shields.io/badge/%E8%8B%B1%E6%96%87-English-blue)](./README.md)
-</p>
+</center>
+
 
 The repo contains:
 - The official implementation of [SciMind: A Multimodal Mixture-of-Experts Model for Advancing Pharmaceutical Sciences](https://openreview.net/forum?id=xbyPquFUB4)
@@ -83,9 +84,9 @@ Improvements compared to Llama2:
    
    ├── text_to_smiles
    
-   + ├── LPM-24_train_qa_conversation.json\
-   + ├── LPM-24_test_qa_conversation.json\
-   + └── LPM-24_test.json\
+   + ├── LPM-24_train_qa_conversation.json
+   + ├── LPM-24_test_qa_conversation.json
+   + └── LPM-24_test.json
    + └── LPM-24_test.json
    
    ├── text_to_smiles_generate
@@ -116,22 +117,22 @@ then, you need to prepare the correct format data and run scripts
 -  run script *run_mindformer.py* (run by one NPU)
 
 ```
-> python run_mindformer.py\
---config {config_file_path}\
---run_mode predict\
---predict_data {input_data_path}\
---use_parallel False --device_id 0\
+> python run_mindformer.py
+--config {config_file_path}
+--run_mode predict
+--predict_data {input_data_path}
+--use_parallel False --device_id 0
 --save_file {output_path}
 ```
 example：
 
  ```
  python run_mindformer.py\
- --config configs/llama2/run_llama2_7b_finetune.yaml\
- --run_mode predict\
+ --config configs/llama2/run_llama2_7b_finetune.yaml
+ --run_mode predict
  --predict_data ./LPM-24-data/smiles2text_generate/LPM-24_smile2text_generate.txt\
- --use_parallel False\
- --device_id 0\
+ --use_parallel False
+ --device_id 0
  --save_file ./LPM-24-data/smiles2text_generate/output_LPM_smiles2text.txt
  ```
 
@@ -146,11 +147,11 @@ example：
 
 - Further process the JSON file to obtain a MindRecord format file for model fine-tuning. Use the following preprocessing script to generate MindRecord format training data
 ```
-  python llama_preprocess_2.py\
-  --dataset_type qa\
-  --input_glob {json/data/path} # Example: ./LPM-24-data/text2smiles/LPM-24_train_qa_conversation.json\
-  --model_file ./mindformers/checkpoint_download/llama2/tokenizer.model\
-  --seq_length 2048\
+  python llama_preprocess_2.py
+  --dataset_type qa
+  --input_glob {json/data/path} # Example: ./LPM-24-data/text2smiles/LPM-24_train_qa_conversation.json
+  --model_file ./mindformers/checkpoint_download/llama2/tokenizer.model
+  --seq_length 2048
   --output_file {output_path}example.mindrecord
 ```
 
