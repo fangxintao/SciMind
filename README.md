@@ -1,9 +1,9 @@
 <h2 align="center">SciMind: A Multimodal Mixture-of-Experts Model for Advancing Pharmaceutical Sciences </h2>
 
-
-<h6 align="center">
-    <img src="https://img.shields.io/badge/英文-English-blue"  width="85", href="./README.md"> <img src="https://img.shields.io/badge/中文-Simplified chinese-blue"  width="140", href="./README_CN.md">
-</h6>
+<p align="center">
+[![简体中文 badge](https://img.shields.io/badge/%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87-Simplified%20Chinese-blue)](./README_CN.md)
+[![英文 badge](https://img.shields.io/badge/%E8%8B%B1%E6%96%87-English-blue)](./README.md)
+</p>
 
 The repo contains:
 - The official implementation of [SciMind: A Multimodal Mixture-of-Experts Model for Advancing Pharmaceutical Sciences](https://openreview.net/forum?id=xbyPquFUB4)
