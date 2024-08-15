@@ -1,11 +1,13 @@
 <h2 align="center">SciMind: A Multimodal Mixture-of-Experts Model for Advancing Pharmaceutical Sciences </h2>
 
-<center>
-[![简体中文 badge](https://img.shields.io/badge/%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87-Simplified%20Chinese-blue)](./README_CN.md)
-[![英文 badge](https://img.shields.io/badge/%E8%8B%B1%E6%96%87-English-blue)](./README.md)
-</center>
-
-
+<h6 align="center">
+    <a href="README.md">
+        <img src="https://img.shields.io/badge/英文-English-blue" width="85">
+    </a> 
+    <a href="README_CN.md">
+        <img src="https://img.shields.io/badge/中文-Simplified%20Chinese-blue" width="140">
+    </a>
+</h6>
 The repo contains:
 - The official implementation of [SciMind: A Multimodal Mixture-of-Experts Model for Advancing Pharmaceutical Sciences](https://openreview.net/forum?id=xbyPquFUB4)
 
@@ -71,9 +73,9 @@ Improvements compared to Llama2:
 3. LPM24 data: *./LPM-24-data*\
    **LPM-24-data**\
    ├── smiles_to_text
-   + ├── LPM-24_train_qa_conversation.json\
-   + ├── LPM-24_test_qa_conversation.json\
-   + ├── LPM-24_test.json\
+   + ├── LPM-24_train_qa_conversation.json
+   + ├── LPM-24_test_qa_conversation.json
+   + ├── LPM-24_test.json
    + ├── LPM-24_train.json
    
    ├── smiles_to_text_generate
@@ -130,7 +132,7 @@ example：
  python run_mindformer.py\
  --config configs/llama2/run_llama2_7b_finetune.yaml
  --run_mode predict
- --predict_data ./LPM-24-data/smiles2text_generate/LPM-24_smile2text_generate.txt\
+ --predict_data ./LPM-24-data/smiles2text_generate/LPM-24_smile2text_generate.txt
  --use_parallel False
  --device_id 0
  --save_file ./LPM-24-data/smiles2text_generate/output_LPM_smiles2text.txt
